@@ -1,4 +1,9 @@
 fastapi
+nltk
 pandas
-uvicorn
 pyarrow
+uvicorn
+matplotlib
+surprise
+fastparquet
+scikit-learn

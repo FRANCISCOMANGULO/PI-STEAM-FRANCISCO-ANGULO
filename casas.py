@@ -4,9 +4,10 @@ import os   # Para manejo de archivos
 import datetime as dt   # Para manejo de fechas
 import json   # Para manejo de archivos json
 import gc   # Para garbage collector
-#rom sklearn.metrics.pairwise import cosine_similarity
-#from surprise import Dataset, Reader, SVD, accuracy
+from sklearn.metrics.pairwise import cosine_similarity
+from surprise import Dataset, Reader, SVD, accuracy
 import heapq
+from surprise.model_selection import train_test_split
 
 
 
@@ -192,7 +193,7 @@ def developer_reviews_analysis(desarrolladora:str):
 
 
 
-'''def user_entrenado(user_id):
+def user_entrenado(user_id):
     # Cargar los datos en un DataFrame de pandas
     df = dfreviews
     n=5
@@ -220,4 +221,4 @@ def developer_reviews_analysis(desarrolladora:str):
     top_n = [(item_id, -est) for est, item_id in top_n]
     top_n_items = [df[df['Item_Id'] == item_id]['App_name'].iloc[0] for item_id, _ in top_n]
 
-    return top_n_items'''
+    return top_n_items
