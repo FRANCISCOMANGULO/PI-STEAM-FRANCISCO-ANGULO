@@ -2,4 +2,3 @@ fastapi
 pandas
 uvicorn
 pyarrow
-surpirse

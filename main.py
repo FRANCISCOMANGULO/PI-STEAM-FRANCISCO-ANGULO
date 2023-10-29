@@ -8,7 +8,7 @@ from casas import developer_reviews_analysis
 from typing import List, Dict, Tuple, Sequence, Any, Union, Optional, Callable 
 from fastapi.responses import JSONResponse
 import pandas as pd
-from sklearn.metrics.pairwise import cosine_similarity
+#from sklearn.metrics.pairwise import cosine_similarity
 #from casas import user_entrenado
 
 app = FastAPI()
@@ -54,7 +54,7 @@ async def get_developer_reviews_analysis(developer_name: str):
     # Devolver el resultado como respuesta JSON
     return developer_data
 
-@app.get("/user_entrenado/{user_id}")
+'''@app.get("/user_entrenado/{user_id}")
 async def user_entrenado(user_id: str):
     recomendado_user = user_entrenado(user_id)
-    return recomendado_user
+    return recomendado_user'''
