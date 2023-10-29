@@ -4,7 +4,7 @@ import os   # Para manejo de archivos
 import datetime as dt   # Para manejo de fechas
 import json   # Para manejo de archivos json
 import gc   # Para garbage collector
-from sklearn.metrics.pairwise import cosine_similarity
+#rom sklearn.metrics.pairwise import cosine_similarity
 #from surprise import Dataset, Reader, SVD, accuracy
 import heapq
 
@@ -37,8 +37,7 @@ def top_desarrolladores_recomendados(year):
 
     # Ordenar los resultados por número de juegos recomendados y devolver los tres primeros desarrolladores
     top_desarrolladores = df_count.sort_values('App_name', ascending=False).head(3)['Developer'].tolist()
-    del df_count, df_year
-    gc.collect()
+    
     # Devolver el top 3 de desarrolladores
     return top_desarrolladores
 
