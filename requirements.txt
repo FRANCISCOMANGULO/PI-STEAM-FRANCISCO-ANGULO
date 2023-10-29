@@ -5,3 +5,4 @@ pyarrow
 uvicorn
 pyarrow
 surpirse
+scikit-learn
