@@ -3,7 +3,5 @@ nltk
 pandas
 pyarrow
 uvicorn
-matplotlib
-surprise
-fastparquet
-scikit-learn
+pyarrow
+surpirse
