@@ -4,5 +4,5 @@ pandas
 pyarrow
 uvicorn
 pyarrow
-surpirse
+surprise
 scikit-learn
