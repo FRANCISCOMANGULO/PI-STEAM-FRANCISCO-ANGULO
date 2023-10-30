@@ -4,7 +4,7 @@ import os   # Para manejo de archivos
 import datetime as dt   # Para manejo de fechas
 import json   # Para manejo de archivos json
 import gc   # Para garbage collector
-from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics.pairwise import cosine_similarity  
 from surprise import Dataset, Reader, SVD, accuracy
 import heapq
 from surprise.model_selection import train_test_split

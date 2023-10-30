@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from typing import Union
-from casas import top_desarrolladores_recomendados
+from casas import top_desarrolladores_recomendados, developer, developer_reviews_analysis, user_entrenado
 #from casas import userdata
 #from casas import UserForGenre
 from casas import developer
@@ -9,9 +9,10 @@ from typing import List, Dict, Tuple, Sequence, Any, Union, Optional, Callable
 from fastapi.responses import JSONResponse
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
-from casas import user_entrenado
 
 
+#from sklearn.metrics.pairwise import cosine_similarity
+#from casas import user_entrenado
 
 app = FastAPI()
 
