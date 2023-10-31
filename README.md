@@ -16,7 +16,7 @@ Este proyecto final es el proceso de ETL, EDA y ML de un conjunto de datasets de
 ### ETL 🔧
 
 El proceso de este proyecto se basa en de un conjunto de datos hacer una limpieza, transformalos y obtener la informacion mas importante.
-En la parte de Extracción, Transformación y Carga (ETL) que se utiliza para analizar datos de juegos y usuarios en una plataforma de juegos.
+En la parte de Extracción, Transformación y Carga (ETL) que se utiliza para analizar datos de juegos y usuarios en una plataforma de juegos [ETL](https://github.com/FRANCISCOMANGULO/PI-STEAM-FRANCISCO-ANGULO/blob/main/ETL_PI.ipynb)
 
 1. **Extracción**: Los datos se extraen de varios archivos parquet que contienen información sobre los juegos y las reseñas de los usuarios. Los archivos se leen en DataFrames de pandas para su posterior procesamiento.
 
@@ -28,7 +28,7 @@ Además, el código también incluye la implementación de un sistema de recomen
 
 ### EDA 🖇️
 
-En este trabajo, utilizaremos un conjunto de datos previamente recopilado para llevar a cabo un EDA completo. Exploraremos las dimensiones y estructura de los datos, identificaremos tendencias, patrones y posibles anomalías. Además, aplicaremos visualizaciones y estadísticas descriptivas para comunicar de manera efectiva los hallazgos, el link al archivo es lin.
+En este trabajo, utilizaremos un conjunto de datos previamente recopilado para llevar a cabo un EDA completo. Exploraremos las dimensiones y estructura de los datos, identificaremos tendencias, patrones y posibles anomalías. Además, aplicaremos visualizaciones y estadísticas descriptivas para comunicar de manera efectiva los hallazgos, el link al archivo es [EDA](https://github.com/FRANCISCOMANGULO/PI-STEAM-FRANCISCO-ANGULO/blob/main/EDA_PI.ipynb).
 
 El objetivo de este trabajo es doble. En primer lugar, pretendemos profundizar en la comprensión de un conjunto de datos específico y ofrecer una visión detallada de sus características clave. En segundo lugar, nuestro trabajo servirá como un recurso útil para aquellos interesados en aprender cómo llevar a cabo un EDA completo, destacando las técnicas y herramientas esenciales utilizadas en el proceso.
 
@@ -37,7 +37,7 @@ A medida que avancemos en este análisis, descubriremos no solo la riqueza de in
 
 ## Desarrollo de funciones en fast api ⚙️
 
-Para el desarrollo de las funciones que van a correr en fast api, las cuales despues deployamos en render son las siguientes y pueden verser desarroladas en el siguiente archivo lin:
+Para el desarrollo de las funciones que van a correr en fast api, las cuales despues deployamos en render son las siguientes y pueden verser desarroladas en el siguiente archivo [ML](https://github.com/FRANCISCOMANGULO/PI-STEAM-FRANCISCO-ANGULO/blob/main/ML.ipynb) :
 
 1. `top_desarrolladores_recomendados(year)`: Esta función toma un año como entrada y devuelve los tres principales desarrolladores que tienen la mayor cantidad de juegos recomendados en ese año. Los datos se extraen de un DataFrame previamente cargado llamado `merged_df`.
 
@@ -51,7 +51,7 @@ Para el desarrollo de las funciones que van a correr en fast api, las cuales des
 
 ## Despliegue en Render 📦
 
-Al final, para hacer deploy de este proyecto, usamos Render, el cual crea una máquina virtual donde especificamos lo que usaremos para arrancar nuestra API. La etapa en este proceso fue complicada debido a los múltiples errores que se presentaron, pero al final pudo completarse con éxito y este es el link.
+Al final, para hacer deploy de este proyecto, usamos Render, el cual crea una máquina virtual donde especificamos lo que usaremos para arrancar nuestra API. La etapa en este proceso fue complicada debido a los múltiples errores que se presentaron, pero al final pudo completarse con éxito y este es el [Render](https://pi-francisco-angulo.onrender.com) .
 
 La elección de Render como plataforma de implementación fue impulsada por su capacidad para simplificar el proceso de implementación, ofreciendo una solución robusta para ejecutar nuestras aplicaciones en la nube. Al configurar la máquina virtual en Render, pudimos definir cuidadosamente los recursos y entornos necesarios para asegurar un funcionamiento óptimo de nuestra API. Esta capacidad de personalización es crucial, ya que nos permitió adaptar la infraestructura a las necesidades específicas de nuestro proyecto.
 
@@ -75,6 +75,19 @@ Además, el proyecto también parece utilizar otras herramientas y bibliotecas q
 
 
 En conclusión, la implementación de ML Ops en el contexto de una plataforma de juegos como Steam es fundamental para optimizar la gestión de modelos de recomendación, detección de fraudes y otros sistemas de inteligencia artificial. ML Ops permite un despliegue más rápido y seguro de modelos, asegurando una experiencia de usuario más personalizada y segura. Además, facilita la escalabilidad y el mantenimiento continuo de estos sistemas, lo que resulta en un beneficio significativo para la plataforma y sus usuarios. La integración exitosa de ML Ops en Steam ejemplifica cómo esta metodología es esencial para el éxito en entornos empresariales impulsados por datos y aprendizaje automático.
+
+### Enlaces ⚙️
+[Render](https://pi-francisco-angulo.onrender.com)
+
+
+[ETL](https://github.com/FRANCISCOMANGULO/PI-STEAM-FRANCISCO-ANGULO/blob/main/ETL_PI.ipynb)
+
+
+[EDA](https://github.com/FRANCISCOMANGULO/PI-STEAM-FRANCISCO-ANGULO/blob/main/EDA_PI.ipynb)
+
+
+[ML](https://github.com/FRANCISCOMANGULO/PI-STEAM-FRANCISCO-ANGULO/blob/main/ML.ipynb)
+
 
 
 ## Autore ✒️
