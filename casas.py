@@ -4,11 +4,10 @@ import os   # Para manejo de archivos
 import datetime as dt   # Para manejo de fechas
 import json   # Para manejo de archivos json
 import gc   # Para garbage collector
-from sklearn.metrics.pairwise import cosine_similarity  
-from surprise import Dataset, Reader, SVD, accuracy
+from sklearn.metrics.pairwise import cosine_similarity
+from surprise import Dataset, Reader, SVD, accuracy 
 import heapq
 from surprise.model_selection import train_test_split
-
 
 
 
@@ -16,14 +15,14 @@ df7 = pd.read_parquet('User_reviews_reducido_32.parquet')
 df8 = pd.read_parquet('Output_steam_games_reducido_32.parquet')
 #df9 = pd.read_parquet('User_items_reducido_32.parquet')
 merged_df = pd.read_parquet('Top 3 Desarrolladores.parquet')
-#merged_df5 = pd.read_parquet('User_Data.parquet')
+merged_df5 = pd.read_parquet('User_Data.parquet')
 #merged_df10 = pd.merge(df8, df9, on='Item_Id')
 #df_nuevo = merged_df10.drop(columns=['Item_Id','App_name','Price','Developer','Items_Count','Item_Name'])
 df_f1 = df8[["Item_Id", "Price","Developer","Release_year"]]
-#df_merged123 = pd.merge(df8, df7, on='Item_Id') 
-#df_limpio = df_merged123[['User_Id', 'Item_Id','Developer','Release_year','Sentiment Analysis']]
-#df_limpio = pd.read_parquet('Developer Analysis.parquet')
-dfreviews = pd.read_parquet('DFreviews.parquet') 
+df_merged123 = pd.merge(df8, df7, on='Item_Id') 
+df_limpio = df_merged123[['User_Id', 'Item_Id','Developer','Release_year','Sentiment Analysis']]
+df_limpio = pd.read_parquet('Developer Analysis.parquet')
+dfreviews = pd.read_parquet('DFreviews.parquet')
 
 
 def top_desarrolladores_recomendados(year):
@@ -106,8 +105,7 @@ def top_desarrolladores_recomendados(year):
         'Porcentaje de recomendación': porcentaje_recomendacion,
         'Cantidad de items': cantidad_de_items
     }
-    del user_data, user_items
-    gc.collect()
+    
     return resultados'''
 
 
@@ -132,8 +130,7 @@ def top_desarrolladores_recomendados(year):
         clave_formateada = f'Año: {int(clave)}'
         valor_formateado = int(valor)
         Horas_por_año[clave_formateada] = valor_formateado
-    del df_genre, filtro_usur, horas_jugXaño
-    gc.collect()
+    
     return {"Usuario con más horas jugadas": usur_mas_horas, "Horas jugadas por año": Horas_por_año}'''
 
 
@@ -163,8 +160,7 @@ def developer(developer_name: str):
     table["Porcentaje de juegos gratuitos"] = table["Porcentaje de juegos gratuitos"].apply(lambda x: f"{x}%" if not pd.isna(x) else x)
 
     table = table.reset_index()
-    del developer_data, games_per_year, free_games, free_games_per_year, free_percentage_per_year
-    gc.collect()
+    
     return table
 
 
@@ -186,8 +182,7 @@ def developer_reviews_analysis(desarrolladora:str):
 
     # Se crea un diccionario con el resumen de las reviews
     dicc = {desarrolladora : resumen_reviews}
-    del df_merged, positive_reviews, negative_reviews, resumen_reviews
-    gc.collect()
+    
     # Se devuelve un diccionario con los resultados obtenidos
     return dicc
 

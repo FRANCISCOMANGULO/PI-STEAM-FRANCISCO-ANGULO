@@ -1,18 +1,11 @@
 from fastapi import FastAPI
 from typing import Union
 from casas import top_desarrolladores_recomendados, developer, developer_reviews_analysis, user_entrenado
-#from casas import userdata
-#from casas import UserForGenre
-from casas import developer
-from casas import developer_reviews_analysis
 from typing import List, Dict, Tuple, Sequence, Any, Union, Optional, Callable 
 from fastapi.responses import JSONResponse
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
-
-
-#from sklearn.metrics.pairwise import cosine_similarity
-#from casas import user_entrenado
+from sklearn.metrics.pairwise import cosine_similarity
 
 app = FastAPI()
 
@@ -30,9 +23,9 @@ async def get_userdata(user_id: Union[int, str]):
     user_data = userdata(user_id)
 
     # Devolver el resultado
-    return user_data'''
+    return user_data
 
-'''@app.get("/UserForGenre/{genero}")
+@app.get("/UserForGenre/{genero}")
 async def get_UserForGenre(genero: str):
     # Obtener los datos del usuario
     user_data = UserForGenre(genero)
