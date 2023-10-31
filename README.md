@@ -22,7 +22,7 @@ En la parte de Extracción, Transformación y Carga (ETL) que se utiliza para an
 
 2. **Transformación**: Los datos se transforman de varias maneras. Por ejemplo, se filtran los datos por año, desarrollador y otros criterios. Se agrupan los datos para contar el número de juegos por desarrollador y año, y se calcula el porcentaje de juegos gratuitos. También se realizan análisis de sentimientos en las reseñas de los usuarios.
 
-3. **Carga**: Ya con los datos listos, se cargan ala nuve por medio de render.
+3. **Carga**: Ya con los datos listos, se cargan ala nube por medio de render.
 
 Además, el código también incluye la implementación de un sistema de recomendación utilizando la biblioteca `surprise`. Este sistema de recomendación se entrena con los datos de las reseñas de los usuarios y se utiliza para predecir los juegos que un usuario podría preferir, todo esto puede ser visto en el siguiente archivo link.
 
